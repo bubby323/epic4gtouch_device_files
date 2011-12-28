@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2006, Google Inc.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- 
+spnOverride attributes:
+	numeric: MCC+MNC from IMSI - this attribute is used as the key
+	spn: spn to show instead of EFSPN. locales can be specified here too, if needed
+	spn_display_rule: SPN_RULE_SHOW_SPN, SPN_RULE_SHOW_PLMN or both
+	fake_home_on: regard specified PLMN as home
+	
+examples:
+	<spnOverride 
+		numeric="45001" spn="ko_KR;한국어 SPN,en;English SPN,fr;Français SPN,pl;Polski SPN,Default SPN" 
+		spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="45001" fake_home_on="00101,45008"/>
+    <spnOverride numeric="46001" spn="zh_CN;中国联通" />
+-->
+<spnOverrides>
+<!-- Spain -->
+	<spnOverride numeric="21404" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="214"/>
+	<spnOverride numeric="21406" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="214"/>
+	<spnOverride numeric="21408" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="214"/>
+	<spnOverride numeric="21416" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="214"/>
+	<spnOverride numeric="21419" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="214"/>
+	
+<!-- SENA -->
+	<spnOverride numeric="24001" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="24005"/>
+	<spnOverride numeric="24007" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="24005"/>
+
+<!-- Finland -->
+	<spnOverride numeric="24421" fake_home_on="24405"/>
+	
+<!-- Japan -->
+	<spnOverride numeric="44010" spn="NTT DOCOMO"/>
+</spnOverrides>
