@@ -5,6 +5,7 @@
 dalvik.vm.dexopt-data-only=1
 rild.libpath=/system/lib/libsec-ril40.so
 rild.libargs=-d /dev/ttyS0
+ril.ecclist=911,#911,*911
 ro.sf.lcd_density=240
 dalvik.vm.heapsize=64m
 
