@@ -105,7 +105,7 @@ static int load(const char *id,
 
 static void update_network_state_wrapper(int connected, int type, int roaming, const char* extra_info)
 {
-    LOGI("%s was called and saved your from a faulty implementation ;-)", __func__);
+    LOGI("%s was called and saved you from a faulty implementation ;)", __func__);
 }
 
 static const void* wrapper_get_extension(const char* name)
