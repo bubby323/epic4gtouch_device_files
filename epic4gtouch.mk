@@ -243,7 +243,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # kernel modules for ramdisk
-RAMDISK_MODULES = $(addprefix device/samsung/epic4gtouch/,bthid.ko dhd.ko gspca_main.ko j4fs.ko \
+RAMDISK_MODULES = $(addprefix device/samsung/epic4gtouch/,bthid.ko dhd.ko j4fs.ko \
 	scsi_wait_scan.ko vibrator.ko cyasswitch.ko)
 PRODUCT_COPY_FILES += $(foreach module,\
 	$(RAMDISK_MODULES),\
