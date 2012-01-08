@@ -33,4 +33,7 @@ version 3 - added min/max recycler values.
     <!-- UAProf URL -->
     <string name="uaProfUrl">http://device.sprintpcs.com/Samsung/</string>
 
+    <!-- Force sms split so we don't have people complaining. -->
+    <bool name="enableMultipartSMS">true</bool>
+
 </mms_config>

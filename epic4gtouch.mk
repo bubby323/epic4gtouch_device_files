@@ -50,6 +50,10 @@ PRODUCT_PACKAGES := \
 	libjpega \
 	com.android.future.usb.accessory 
 
+# Device specific apps
+PRODUCT_PACKAGES += \
+    C1Parts
+
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
 	device/samsung/epic4gtouch/etc/asound.conf:system/etc/asound.conf \
