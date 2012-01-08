@@ -25,7 +25,7 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- There is no charging LED. -->
-    <bool name="config_unplugTurnsOnScreen">true</bool>
+    <bool name="config_unplugTurnsOnScreen">false</bool>
 
     <!-- Our amoled doesn't animate well. -->
     <bool name="config_animateScreenLights">false</bool>
