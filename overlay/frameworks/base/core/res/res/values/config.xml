@@ -93,7 +93,7 @@
     <integer name="config_deskDockKeepsScreenOn">0</integer>
     <integer name="config_carDockKeepsScreenOn">1</integer>
 
-    <!-- Default color for notification LED is white -->
+    <!-- Default color for notification LED is now red -->
     <color name="config_defaultNotificationColor">#ffff0000</color>
 
     <!-- Component name of the service providing network location support. -->
@@ -140,6 +140,7 @@
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
         <item>"wl0.1"</item>
+        <item>"softap.*"</item> 
     </string-array>
 
 
@@ -163,10 +164,4 @@
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
     <bool translatable="false" name="skip_restoring_network_selection">true</bool>
-
-<!--
- Set to true if the RSSI should always display CDMA signal
-         strength even on EVDO 
--->
-<bool name="config_alwaysUseCdmaRssi">true</bool>
 </resources>
