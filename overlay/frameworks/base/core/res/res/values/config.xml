@@ -163,4 +163,10 @@
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
     <bool translatable="false" name="skip_restoring_network_selection">true</bool>
+
+<!--
+ Set to true if the RSSI should always display CDMA signal
+         strength even on EVDO 
+-->
+<bool name="config_alwaysUseCdmaRssi">true</bool>
 </resources>
