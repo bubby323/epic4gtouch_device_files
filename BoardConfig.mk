@@ -45,8 +45,6 @@ TARGET_BOOTLOADER_BOARD_NAME := SPH-D710
 TARGET_RECOVERY_INITRC := device/samsung/epic4gtouch/recovery.rc
 TARGET_PROVIDES_MEDIASERVER := true
 
-BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
-
 # Releasetools
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/epic4gtouch/releasetools/c1_ota_from_target_files
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/epic4gtouch/releasetools/c1_img_from_target_files
