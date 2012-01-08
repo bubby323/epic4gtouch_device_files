@@ -9,13 +9,6 @@ ro.sf.lcd_density=240
 ril.ecclist=112,911,#911,*911
 dalvik.vm.heapsize=64m
 
-gsm.sim.operator.numeric = 0
-gsm.sim.operator.alpha = 0
-gsm.sim.operator.iso-country = 0
-
-#Modify MTU from 1500 to 1472 on 3G network
-ro.ril.set.mtu1472 = 1
-
 # Make cdma voicemail the default voicemail number.
 ro.cdma.voicemail.number = mine
 
