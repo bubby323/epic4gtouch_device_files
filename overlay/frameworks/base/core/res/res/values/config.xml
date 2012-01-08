@@ -96,9 +96,6 @@
     <!-- Default color for notification LED is white -->
     <color name="config_defaultNotificationColor">#ffff0000</color>
 
-    <!-- Default blink frequency for notification LED is 9 seconds. -->
-    <integer name="config_defaultNotificationLedOff">9000</integer>
-
     <!-- Component name of the service providing network location support. -->
     <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
 
