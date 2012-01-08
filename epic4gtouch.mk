@@ -182,7 +182,7 @@ PRODUCT_COPY_FILES += \
 # Device specific apps
 PRODUCT_PACKAGES += \
     SamsungServiceMode \
-    EpicTouchParts
+    C1Parts
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
@@ -222,9 +222,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.interfaces.defaultroute=cdma \
     net.cdma.ppp.interface=ppp0 \
     net.connectivity.type=CDMA1 \
-    mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
+    mobiledata.interfaces=eth0,ppp0\
     ro.telephony.ril_class=samsung \
-    ro.ril.samsung_cdma=true 
+    ro.ril.samsung_cdma=true
 
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector

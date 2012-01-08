@@ -134,7 +134,7 @@ on fs
     
     mount debugfs nil /sys/kernel/debug
 
-# create data/gps for GPS demon
+# create data/gps for GPS daemon
     mkdir /data/gps 771 gps system
     chown gps system /data/gps
 
