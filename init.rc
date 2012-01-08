@@ -137,6 +137,7 @@ on fs
 # create data/gps for GPS daemon
     mkdir /data/gps 771 gps system
     chown gps system /data/gps
+    chmod 0777 /system/bin/gpsd
 
 on post-fs
     # verfiy filesystem (UMS)
