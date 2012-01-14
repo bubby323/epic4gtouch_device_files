@@ -17,8 +17,4 @@
     <string name="notification_enabled_summary_head">啟用內核的 LED 通知功能。注意：進行中的通知會防止手機進入深度睡眠狀態</string>
     <string name="notification_timeout_title_head">通知逾時</string>
     <string name="notification_timeout_summary_head">設定通知指示器開啟多久後關閉</string>
-
-    <string name="category_radio_title">行動網路</string>
-    <string name="hspa_title_head">HSPA</string>
-    <string name="hspa_summary_head">啟用 HSDPA／HSUPA</string>
 </resources>

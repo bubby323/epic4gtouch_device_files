@@ -11,7 +11,6 @@ public class Startup extends BroadcastReceiver {
         TouchKeyBacklightTimeout.restore(context);
         NotificationTimeout.restore(context);
         NotificationEnabled.restore(context);
-        Hspa.restore(context);
         mDNIeUIMode.restore(context);
         mDNIeUserMode.restore(context);
     }
