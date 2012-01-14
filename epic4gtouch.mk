@@ -65,7 +65,8 @@ PRODUCT_COPY_FILES += \
 	device/samsung/epic4gtouch/lpm.rc:root/lpm.rc \
 	device/samsung/epic4gtouch/init.smdkc210.rc:root/init.smdkc210.rc \
 	device/samsung/epic4gtouch/init.smdkv310.rc:root/init.smdkv310.rc \
-	device/samsung/epic4gtouch/ueventd.smdkv310.rc:root/ueventd.smdkv310.rc
+	device/samsung/epic4gtouch/ueventd.smdkv310.rc:root/ueventd.smdkv310.rc \
+        device/samsung/epic4gtouch/etc/init.d/10soundbooster:system/etc/init.d/10soundbooster
 
 # mDNIe
 PRODUCT_COPY_FILES += \
@@ -88,6 +89,7 @@ PRODUCT_COPY_FILES += \
 
 # Configuration files for audio
 PRODUCT_COPY_FILES += \
+        device/samsung/c1-common/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
 	device/samsung/epic4gtouch/etc/audio/LVVEFS_Rx_Configuration.txt:system/etc/audio/LVVEFS_Rx_Configuration.txt \
 	device/samsung/epic4gtouch/etc/audio/LVVEFS_Tx_Configuration.txt:system/etc/audio/LVVEFS_Tx_Configuration.txt \
 	device/samsung/epic4gtouch/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt \
