@@ -17,4 +17,8 @@
     <string name="notification_enabled_summary_head">Enable kernel support for LED Notifications.  Note: An active notification will prevent the phone from entering deep sleep</string>
     <string name="notification_timeout_title_head">Notification Timeout</string>
     <string name="notification_timeout_summary_head">How long the notification indicator should stay on before turning off</string>
+
+    <string name="category_radio_title">Radio</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Enable HSDPA/HSUPA</string>
 </resources>

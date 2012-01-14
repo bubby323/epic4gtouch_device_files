@@ -11,12 +11,14 @@ public class C1Parts extends PreferenceActivity  {
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
     public static final String NOTIFICATION_TIMEOUT = "notification_timeout";
     public static final String NOTIFICATION_ENABLED = "notification_enabled";
+    public static final String KEY_HSPA = "hspa";
 
     private ListPreference mmDNIeUIMode;
     private ListPreference mmDNIeUserMode;
     private ListPreference mBacklightTimeout;
     private ListPreference mNotificationTimeout;
     private ListPreference mNotificationEnabled;
+    private ListPreference mHspa;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,9 @@ public class C1Parts extends PreferenceActivity  {
         mBacklightTimeout.setEnabled(TouchKeyBacklightTimeout.isSupported());
         mBacklightTimeout.setOnPreferenceChangeListener(new TouchKeyBacklightTimeout());
 
+        mHspa = (ListPreference) findPreference(KEY_HSPA);
+        mHspa.setEnabled(Hspa.isSupported());
+        mHspa.setOnPreferenceChangeListener(new Hspa(this));
     }
 
 }
