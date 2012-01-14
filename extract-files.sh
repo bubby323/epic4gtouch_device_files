@@ -93,7 +93,7 @@ adb pull /system/vendor/firmware/mfc_fw.bin ../../../vendor/$MANUFACTURER/$COMMO
 adb pull /system/lib/hw/acoustics.default.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/acoustics.default.so
 adb pull /system/lib/hw/alsa.default.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/alsa.default.so
 adb pull /system/lib/hw/copybit.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/copybit.SPH-D710.so
-adb pull /system/lib/hw/vendor-gps.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gps.SPH-D710.so
+adb pull /system/lib/hw/gps.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gps.SPH-D710.so
 adb pull /system/lib/hw/gralloc.default.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gralloc.default.so
 adb pull /system/lib/hw/gralloc.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gralloc.SPH-D710.so
 adb pull /system/lib/hw/lights.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/lights.SPH-D710.so
@@ -271,7 +271,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/hw/acoustics.default.so:system/lib/hw/acoustics.default.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/hw/alsa.default.so:system/lib/hw/alsa.default.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/hw/copybit.SPH-D710.so:system/lib/hw/copybit.smdkv310.so \\
-    vendor/__MANUFACTURER__/__COMMON__/proprietary/hw/gps.SPH-D710.so:system/lib/hw/vendor-gps.smdkv310.so \\
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/hw/gps.SPH-D710.so:system/lib/hw/gps.smdkv310.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/hw/gralloc.default.so:system/lib/hw/gralloc.default.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/hw/gralloc.SPH-D710.so:system/lib/hw/gralloc.smdkv310.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/hw/lights.SPH-D710.so:system/lib/hw/lights.smdkv310.so
