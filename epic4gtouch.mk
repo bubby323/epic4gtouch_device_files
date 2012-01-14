@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
 
 # Configuration files for audio
 PRODUCT_COPY_FILES += \
-        device/samsung/c1-common/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
+        device/samsung/epic4gtouch/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
 	device/samsung/epic4gtouch/etc/audio/LVVEFS_Rx_Configuration.txt:system/etc/audio/LVVEFS_Rx_Configuration.txt \
 	device/samsung/epic4gtouch/etc/audio/LVVEFS_Tx_Configuration.txt:system/etc/audio/LVVEFS_Tx_Configuration.txt \
 	device/samsung/epic4gtouch/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt \
