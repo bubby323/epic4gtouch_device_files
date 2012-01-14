@@ -50,7 +50,7 @@
                       android:key="pref_key_sms_split_160"
                       android:summary="@string/pref_summary_sms_split_160"
                       android:title="@string/pref_title_sms_split_160" />
-    <CheckBoxPreference android:defaultValue="false"
+    <CheckBoxPreference android:defaultValue="true"
                       android:key="pref_key_sms_split_counter"
                       android:summary="@string/pref_summary_sms_split_counter"
                       android:dependency="pref_key_sms_split_160"
