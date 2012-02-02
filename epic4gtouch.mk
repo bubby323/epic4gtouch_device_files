@@ -34,131 +34,10 @@
 # and is used by people who have access to binary versions of the drivers
 # but not to the original vendor tree. Be sure to update both.
 
-# include common makefile for c1 platform
-# $(call inherit-product-if-exists, device/samsung/epic4gtouch/common.mk)
+# include common makefile for c1 platform (cdma)
+$(call inherit-product-if-exists, device/samsung/c1-common/common-cdma.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/epic4gtouch/overlay
-
-# Libs
-PRODUCT_PACKAGES := \
-	gps.smdkv310 \
-	sensors.smdkv310 \
-	mediaserver.smdkv310 \
-	overlay.smdkv310 \
-	libstagefrighthw \
-	libexifa \
-	libjpega \
-	com.android.future.usb.accessory 
-
-# These are the hardware-specific configuration files
-PRODUCT_COPY_FILES := \
-	device/samsung/epic4gtouch/etc/asound.conf:system/etc/asound.conf \
-	device/samsung/epic4gtouch/etc/gps.conf:system/etc/gps.conf \
-	device/samsung/epic4gtouch/etc/nvram_net.txt:system/etc/nvram_net.txt \
-	device/samsung/epic4gtouch/etc/sirfgps.conf:system/etc/sirfgps.conf \
-	device/samsung/epic4gtouch/etc/vold.fstab:system/etc/vold.fstab \
-	device/samsung/epic4gtouch/egl.cfg:system/lib/egl/egl.cfg
-
-# Init files
-PRODUCT_COPY_FILES += \
-	device/samsung/epic4gtouch/init.rc:root/init.rc \
-	device/samsung/epic4gtouch/lpm.rc:root/lpm.rc \
-	device/samsung/epic4gtouch/init.smdkc210.rc:root/init.smdkc210.rc \
-	device/samsung/epic4gtouch/init.smdkv310.rc:root/init.smdkv310.rc \
-	device/samsung/epic4gtouch/ueventd.smdkv310.rc:root/ueventd.smdkv310.rc \
-        device/samsung/epic4gtouch/etc/init.d/10soundbooster:system/etc/init.d/10soundbooster
-
-# mDNIe
-PRODUCT_COPY_FILES += \
-	device/samsung/epic4gtouch/etc/mdnie_tune_bypass_mode:system/etc/mdnie_tune_bypass_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_camera_mode:system/etc/mdnie_tune_camera_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_camera_outdoor_mode:system/etc/mdnie_tune_camera_outdoor_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_dynamic_mode:system/etc/mdnie_tune_dynamic_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_gallery_mode:system/etc/mdnie_tune_gallery_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_movie_mode:system/etc/mdnie_tune_movie_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_outdoor_mode:system/etc/mdnie_tune_outdoor_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_standard_mode:system/etc/mdnie_tune_standard_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_ui_dynamic_mode:system/etc/mdnie_tune_ui_dynamic_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_ui_movie_mode:system/etc/mdnie_tune_ui_movie_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_ui_standard_mode:system/etc/mdnie_tune_ui_standard_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_video_cold_mode:system/etc/mdnie_tune_video_cold_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_video_cold_outdoor_mode:system/etc/mdnie_tune_video_cold_outdoor_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_video_mode:system/etc/mdnie_tune_video_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_video_warm_mode:system/etc/mdnie_tune_video_warm_mode \
-	device/samsung/epic4gtouch/etc/mdnie_tune_video_warm_outdoor_mode:system/etc/mdnie_tune_video_warm_outdoor_mode
-
-# Configuration files for audio
-PRODUCT_COPY_FILES += \
-        device/samsung/epic4gtouch/etc/audio/soundbooster.txt:system/etc/audio/soundbooster.txt \
-	device/samsung/epic4gtouch/etc/audio/LVVEFS_Rx_Configuration.txt:system/etc/audio/LVVEFS_Rx_Configuration.txt \
-	device/samsung/epic4gtouch/etc/audio/LVVEFS_Tx_Configuration.txt:system/etc/audio/LVVEFS_Tx_Configuration.txt \
-	device/samsung/epic4gtouch/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_EARPIECE_WIDEBAND.txt \
-	device/samsung/epic4gtouch/etc/audio/Rx_ControlParams_SPEAKER_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_SPEAKER_WIDEBAND.txt \
-	device/samsung/epic4gtouch/etc/audio/Rx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt \
-	device/samsung/epic4gtouch/etc/audio/Rx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Rx_ControlParams_WIRED_HEADSET_WIDEBAND.txt \
-	device/samsung/epic4gtouch/etc/audio/Tx_ControlParams_EARPIECE_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_EARPIECE_WIDEBAND.txt \
-	device/samsung/epic4gtouch/etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt \
-	device/samsung/epic4gtouch/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt \
-	device/samsung/epic4gtouch/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt \
-	device/samsung/epic4gtouch/etc/audio/codec/FMRadioEar.ini:system/etc/audio/codec/FMRadioEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/FMRadioSpk.ini:system/etc/audio/codec/FMRadioSpk.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/MusicEar.ini:system/etc/audio/codec/MusicEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/MusicSpk.ini:system/etc/audio/codec/MusicSpk.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/RecHeadSetMic.ini:system/etc/audio/codec/RecHeadSetMic.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/RecMainMic.ini:system/etc/audio/codec/RecMainMic.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/RecSubMic.ini:system/etc/audio/codec/RecSubMic.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/RingtoneEar.ini:system/etc/audio/codec/RingtoneEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/RingtoneSpk.ini:system/etc/audio/codec/RingtoneSpk.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoiceCall3pEar.ini:system/etc/audio/codec/VoiceCall3pEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoiceCall4pEar.ini:system/etc/audio/codec/VoiceCall4pEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoiceCallBT.ini:system/etc/audio/codec/VoiceCallBT.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoiceCallRcv.ini:system/etc/audio/codec/VoiceCallRcv.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoiceCallSpk.ini:system/etc/audio/codec/VoiceCallSpk.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoiceRecHeadSetMic.ini:system/etc/audio/codec/VoiceRecHeadSetMic.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoiceRecMainMic.ini:system/etc/audio/codec/VoiceRecMainMic.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoipCall3pEar.ini:system/etc/audio/codec/VoipCall3pEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoipCall4pEar.ini:system/etc/audio/codec/VoipCall4pEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoipCallRcv.ini:system/etc/audio/codec/VoipCallRcv.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VoipCallSpk.ini:system/etc/audio/codec/VoipCallSpk.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VtCall3pEar.ini:system/etc/audio/codec/VtCall3pEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VtCall4pEar.ini:system/etc/audio/codec/VtCall4pEar.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VtCallBT.ini:system/etc/audio/codec/VtCallBT.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VtCallRcv.ini:system/etc/audio/codec/VtCallRcv.ini \
-	device/samsung/epic4gtouch/etc/audio/codec/VtCallSpk.ini:system/etc/audio/codec/VtCallSpk.ini
-
-# Alsa configuration files
-PRODUCT_COPY_FILES += \
-	device/samsung/epic4gtouch/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
-	device/samsung/epic4gtouch/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf
-
-# configuration files
-PRODUCT_COPY_FILES += \
-	device/samsung/epic4gtouch/etc/media_profiles.xml:system/etc/media_profiles.xml \
-	device/samsung/epic4gtouch/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
-
-# These are the OpenMAX IL modules
-PRODUCT_PACKAGES += \
-	libSEC_OMX_Core.smdkv310 \
-	libOMX.SEC.AVC.Decoder.smdkv310 \
-	libOMX.SEC.M4V.Decoder.smdkv310 \
-	libOMX.SEC.M4V.Encoder.smdkv310 \
-	libOMX.SEC.AVC.Encoder.smdkv310
-
 
 # apns config file
 PRODUCT_COPY_FILES += \
@@ -183,8 +62,7 @@ PRODUCT_COPY_FILES += \
 
 # Device specific apps
 PRODUCT_PACKAGES += \
-    SamsungServiceMode \
-    C1Parts
+    SamsungServiceMode
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
