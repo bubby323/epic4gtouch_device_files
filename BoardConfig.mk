@@ -46,8 +46,8 @@ TARGET_RECOVERY_INITRC := device/samsung/epic4gtouch/recovery.rc
 TARGET_PROVIDES_MEDIASERVER := true
 
 # Releasetools
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/epic4gtouch/releasetools/c1_ota_from_target_files
-TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/epic4gtouch/releasetools/c1_img_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/c1-common/releasetools/c1_ota_from_target_files
+TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/c1-common/releasetools/c1_img_from_target_files
 
 # Camera
 USE_CAMERA_STUB := false
@@ -64,7 +64,7 @@ BOARD_FORCE_STATIC_A2DP := true
 BOARD_USES_GPSWRAPPER := true
 
 # Vibrator
-BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/samsung/epic4gtouch/vibrator/tspdrv.c
+BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/samsung/c1-common/vibrator/tspdrv.c
 
 # Kernel
 BOARD_NAND_PAGE_SIZE := 4096 -s 128
@@ -98,9 +98,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/epic4gtouch/recovery/recovery_ui.c
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/epic4gtouch/shbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/c1-common/shbootimg.mk
 
+# assert
 TARGET_OTA_ASSERT_DEVICE := epic4gtouch,SPH-D710
 
-# Include aries specific stuff
--include device/samsung/epic4gtouch/Android.mk
+# Include c1 specific stuff
+-include device/samsung/c1-common/Android.mk
